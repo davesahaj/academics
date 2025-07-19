@@ -1,47 +1,54 @@
 /* ==========================================================================
-   DEFAULT THEME
+   MODERN ACADEMIC THEME
    ========================================================================== */
 
-/* Color codes used for the theme */
+/* Color Palette */
 $gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : #9ba1a6;
-$lighter-gray               : mix(#fff, $gray, 90%);
+$gray-dark                 : mix(#000, $gray, 50%);
+$gray-darker               : mix(#000, $gray, 70%);
+$gray-light                : #a1a7ad;
+$gray-lighter              : mix(#fff, $gray, 90%);
 
-/* Color codes used for the site */
-$danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
-$notice-color               : #7a8288;
-$success-color              : #62c462;
-$warning-color              : #f89406;
+$primary-color             : #2f7f93;  // cool academic blue
+$secondary-color           : #52adc8;  // lighter blue for links
+$highlight-color           : #f89406;  // warning or emphasis
+$success-color             : #62c462;
+$error-color               : #ee5f5b;
+$info-color                : $primary-color;
 
-/* Other basic settings for the template */
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
-$global-transition          : all 0.2s ease-in-out;
-$masthead-height            : 70px;
-$navicon-width              : 28px;
-$navicon-height             : 4px;
-$sidebar-link-max-width     : 250px;
-$sidebar-screen-min-width   : 1024px;
+/* UI Constants */
+$border-radius             : 6px;
+$box-shadow                : 0 2px 4px rgba(0, 0, 0, 0.1);
+$transition-default        : all 0.2s ease-in-out;
 
-/* Default light theme for the site */
+$layout-header-height      : 72px;
+$navicon-width             : 26px;
+$navicon-height            : 3px;
+$sidebar-max-width         : 260px;
+$breakpoint-sidebar        : 1024px;
+
+/* Root Theme Variables */
 :root {
-    --global-base-color                 : #{$gray};
-    --global-bg-color                   : #fff;
-    --global-footer-bg-color            : #f2f3f3;
-    --global-border-color               : #{$lighter-gray};
-    --global-dark-border-color          : #bdc1c4;
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    --global-link-color                 : #52adc8;
-    --global-link-color-hover           : mix(#000, #2f7f93, 25%);
-    --global-link-color-visited         : mix(#fff, #2f7f93, 25%);  
-    --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
-    --global-text-color                 : #{$dark-gray};
-    --global-text-color-light           : #{$light-gray};
-    --global-thead-color                : #{$lighter-gray};
+    --base-color:                #{$gray};
+    --background-color:         #ffffff;
+    --footer-background:        #f5f6f7;
+    --border-color:             #{$gray-lighter};
+    --border-color-dark:        #c3c7cb;
+
+    --code-bg-color:            #f9f9f9;
+    --code-text-color:          #{$gray-darker};
+
+    --caption-text-color:       mix(#fff, #{$gray-dark}, 20%);
+    
+    --link-color:               #{$secondary-color};
+    --link-hover-color:         mix(#000, #{$primary-color}, 20%);
+    --link-visited-color:       mix(#fff, #{$primary-color}, 20%);
+    
+    --header-link-color:        #{$gray-dark};
+    --header-link-hover-color:  mix(#000, #{$gray}, 25%);
+    
+    --text-color:               #{$gray-dark};
+    --text-color-light:         #{$gray-light};
+    
+    --table-head-bg:            #{$gray-lighter};
 }
